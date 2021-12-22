@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Registration</title>
+    <link rel="stylesheet" href="assets2/css/LogPageStyle.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <link rel="shortcut icon" href="assets2/images/porsche%20logo.png" type="image/png">
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script src="assets2/Scripts/AdminPageScript.js"></script>
+        <link rel="icon" href="assets/img/logo/logo.ico">
+</head>
+<body onload="openForForInRegFormUser()" style="background-color: orange;">
+    <div class="intro">
+        <div class="mainContent">
+            <div class="container">
+                <div id="RegisterFormDiv">
+                    <div id="divForH3InReg"><h3>Регистрация</h3></div><a href="home.html"></a>
+                    <hr>
+                    <form onsubmit="return RegistrationPageUser()" action="LogInPage.html">
+                        <label>Имя:</label><input type="text" placeholder="Имя" id="firstNameRegPage" pattern="^[A-Za-z. ]{3,40}" required>
+                        <input type="text" placeholder="Фамилия" id="lastNameRegPage" pattern="^[A-Za-z. ]{3,40}" required><br>
+                        <label>Телефон номер:</label><input type="text" id="phoneNumRegPage" pattern="^7\d{9}$|^7\d{2}\s\d{3}\s\d{2}\s\d{2}$" placeholder="775 778 21 41" required><br>
+                        <label>Почта:</label><input type="email" id="emailRegPage" placeholder="@gmail.com" pattern="^[a-z0-9](\.?[a-z0-9]){5,}@gmail\.com?$|^[a-z0-9](\.?[a-z0-9]){5,}@mail\.ru?$" required><br>
+                        <label>Пороль:</label><input type="password" id="passRegPage" placeholder="пороль" pattern="\w{8,}"><br>
+                        <label>Повторите пороль</label><input type="password" id="rePassRegPage" placeholder="пороль"><br>
+                        <div id="genderRegFormDiv"><label>Пол :</label>Мужщина <input type="radio" name="genderRegPage" value="Male">
+                        Женщина <input type="radio" name="genderRegPage" value="Female">
+                            Другое <input type="radio" name="genderRegPage" value="Other" checked></div><br><hr>
+                        <button>Регистрация</button><br>
+                        <span>У вас есть аккаунт?<a href="LogInPage.html"> Логин</a></span>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

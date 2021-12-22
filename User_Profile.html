@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>My Profile</title>
+    <link href="assets2/css/ProfileStyle.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script src="assets2/Scripts/siteScript.js"></script>
+    <link rel="icon" href="assets/img/logo/logo.ico">
+</head>
+<body onload="getUserNameForProf(); loadRequests();">
+    <header>
+
+    </header>
+    <main>
+        <div id="container">
+            <div class="headTitlesBlock" onclick="editStyleUp(1)">Мои просьбы</div>
+            <div class="headTitlesBlock" onclick="editStyleUp(2)">Обратная связь</div>
+            <div class="headTitlesBlock" onclick="window.location.replace('index.html')">Назад в сайт</div>
+            <div id="UserNameDataProfile"></div>
+            <div id="mainContent">
+                <div id="userProfileStatements">
+                    <div id="divForSearchListResProf">
+                        <label>Искать:</label>
+                        <input type="text" placeholder="Искать...">
+                    </div><hr>
+                    <table id="tableForHead">
+                        <tbody>
+                            <tr><th>№</th><th>Тип</th><th>Фильмы</th><th>Ответ</th></tr>
+                        </tbody>
+                    </table>
+                    <hr>
+                    <div id="allListUserListProf">
+                        <table id="tableForAllResultsProfile">
+                            <tbody>
+                            </tbody>
+                        </table>
+                    </div>
+                    <hr>
+                </div>
+                <div id="commentsAdminUserProf">
+                    <h3>Оставь свой отзыв нам Важен</h3>
+                    <textarea rows="18" cols="120"></textarea>
+                    <div id="buttonUserProf">
+                        <button onclick="saveCommentUser()">Сохранить</button>
+                        <button onclick="$('#commentsAdminUserProf textarea').val('')">Чистить</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
